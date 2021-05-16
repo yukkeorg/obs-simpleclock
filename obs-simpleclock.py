@@ -1,3 +1,12 @@
+"""
+obs-simpleclock.py
+
+Simple clock for OBS Studio.
+
+* This program is under the MIT License.
+  Please see LICENSE file for detail.
+"""
+
 import obspython as obs
 
 import datetime
