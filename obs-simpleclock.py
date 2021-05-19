@@ -78,8 +78,17 @@ def script_defaults(settings):
 def script_properties():
     props = obs.obs_properties_create()
 
-    obs.obs_properties_add_text(props, "format", "Format", obs.OBS_TEXT_DEFAULT)
-    p = obs.obs_properties_add_list(props, "source", "Text Source", obs.OBS_COMBO_TYPE_EDITABLE, obs.OBS_COMBO_FORMAT_STRING)
+    obs.obs_properties_add_text(props,
+                                "format",
+                                "Format",
+                                obs.OBS_TEXT_DEFAULT)
+
+    p = obs.obs_properties_add_list(props,
+                                    "source",
+                                    "Text Source",
+                                    obs.OBS_COMBO_TYPE_EDITABLE,
+                                    obs.OBS_COMBO_FORMAT_STRING)
+
     sources = obs.obs_enum_sources()
     if sources is not None:
         for s in sources:

@@ -34,8 +34,16 @@ end
 function script_properties()
     local props = obs.obs_properties_create()
 
-    obs.obs_properties_add_text(props, "format", "Format", obs.OBS_TEXT_DEFAULT)
-    local p = obs.obs_properties_add_list(props, "source", "Text Source", obs.OBS_COMBO_TYPE_EDITABLE, obs.OBS_COMBO_FORMAT_STRING)
+    obs.obs_properties_add_text(props,
+                                "format",
+                                "Format",
+                                obs.OBS_TEXT_DEFAULT)
+
+    local p = obs.obs_properties_add_list(props,
+                                          "source",
+                                          "Text Source",
+                                          obs.OBS_COMBO_TYPE_EDITABLE,
+                                          obs.OBS_COMBO_FORMAT_STRING)
 
     sources = obs.obs_enum_sources()
     if sources ~= nil then
