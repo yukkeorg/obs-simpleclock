@@ -87,7 +87,7 @@ def script_properties():
             if sid == "text_gdiplus" or sid == "text_ft2_source":
                 name = obs.obs_source_get_name(s)
                 obs.obs_property_list_add_string(p, name, name)
-        obs.source_list_release(s)
+        obs.source_list_release(sources)
 
     obs.obs_properties_add_button(props, "button", "Refresh", refresh_pressed)
 
