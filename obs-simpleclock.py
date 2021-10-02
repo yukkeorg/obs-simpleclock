@@ -81,7 +81,7 @@ def script_properties():
     obs.obs_properties_add_text(props,
                                 "format",
                                 "Format",
-                                obs.OBS_TEXT_DEFAULT)
+                                obs.OBS_TEXT_MULTILINE)
 
     p = obs.obs_properties_add_list(props,
                                     "source",
