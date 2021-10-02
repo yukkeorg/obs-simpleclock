@@ -49,7 +49,7 @@ function script_properties()
     if sources ~= nil then
         for _, s in ipairs(sources) do
             local sid = obs.obs_source_get_unversioned_id(s)
-            if sid == "text_gdiplus" or sid == "text_ft2_source" then
+            if sid:find("^text_") ~= nil then
                 local name = obs.obs_source_get_name(s)
                 obs.obs_property_list_add_string(p, name, name)
             end
